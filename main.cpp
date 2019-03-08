@@ -308,6 +308,7 @@ public:
             L.direction = Direction;
             Linker.push_back(L);
             Nodes.push_back(New);
+            ID.push_back(ids);
             if(Direction == 'e' || Direction == 'E'){                                                       ///Directional Statements
                 if(New->x<max_right){                                                                       ///Checks if New Node, fits in the Current grid
                     Map[New->y][New->x] = New->id;
@@ -534,6 +535,7 @@ int main(){
     std::string path;
     solve_interactively(s,e,path);
     std::string path2;
+    std::cout << "Why" << std::endl;
     random_walk(s,e,path2);
     std::cout << path2 << std::endl;
     std::string path3;
