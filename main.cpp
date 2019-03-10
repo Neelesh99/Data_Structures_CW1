@@ -325,12 +325,7 @@ public:
                 if(New->x>=max_left){
                     //std::cout << New->x << std::endl;
                     //std::cout << Prev->x << std::endl;
-                    Map[New->y][New->x] = New->id;
-                }
-                else{
-                    Adjust_Map_Horizontal('W');
-                    //Starter->x++;
-                    max_left = 0;
+                                 max_left = 0;
                     Map[New->y][New->x] = New->id;
                 }
             }
