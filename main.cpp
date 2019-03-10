@@ -351,8 +351,10 @@ public:
                 }
             }
         }
-        else{                                                                                                           ///Uses Nodes vector to track where the user is at right now
-            Nodes.push_back(Nodes[getIndexByID(ids)]);
+        else{
+			Node_Loc* Stat = new Node_Loc;			
+			*Stat = *Nodes[getIndexByID(ids)];                                                                                                           ///Uses Nodes vector to track where the user is at right now
+            Nodes.push_back(Stat);
         }
 
     }
@@ -508,7 +510,7 @@ public:
     }
     ~Map_Printer(){                                                                                                     ///Deallocates Dynamic Memory
         int size = Nodes.size();
-        for(int i = 0; i < size;i++){
+        while(!Nodes.empty()){
             Node_Loc* temp;
             temp = Nodes.back();
             Nodes.pop_back();

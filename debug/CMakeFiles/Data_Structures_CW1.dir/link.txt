@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/Data_Structures_CW1.dir/main.cpp.o  -o Data_Structures_CW1 
