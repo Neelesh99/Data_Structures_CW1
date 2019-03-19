@@ -352,7 +352,7 @@ public:
             }
         }
         else{
-			Node_Loc* Stat = new Node_Loc;			
+			Node_Loc* Stat = new Node_Loc;
 			*Stat = *Nodes[getIndexByID(ids)];                                                                                                           ///Uses Nodes vector to track where the user is at right now
             Nodes.push_back(Stat);
         }
@@ -510,7 +510,7 @@ public:
     }
     ~Map_Printer(){                                                                                                     ///Deallocates Dynamic Memory
         int size = Nodes.size();
-        while(!Nodes.empty()){
+        for(int i = 0; i < size;i++){
             Node_Loc* temp;
             temp = Nodes.back();
             Nodes.pop_back();
